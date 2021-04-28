@@ -20,10 +20,10 @@ Put every attribute of an HTML tag on a new line.
 Usage: place text cursor on a tag and press (default) keymap <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>W</kbd>.
 
 
-<img src="https://raw.githubusercontent.com/cristianofromagio/intellij-wrap-html-attributes/main/assets/usage.gif" border="0"/><br/>
+<img src="https://raw.githubusercontent.com/cristianofromagio/intellij-wrap-html-attributes/main/assets/usage.gif" border="0" width="500"/>
 
 
-See <kbd>File</kbd> > <kbd>⚙️ Settings</kbd> (or <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd>) > <kbd>Tools</kbd> > <kbd>Wrap HTML Plugin</kbd> for plugin settings.
+See `File` > `⚙️ Settings` (or <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd>) > `Tools` > `Wrap HTML Plugin` for plugin settings.
 
 
 v1.1.0 credits to [Sander Bruggeman](https://github.com/terrabythia) ([source](https://github.com/terrabythia/intellij_plugin_wrap_html_attributes))
