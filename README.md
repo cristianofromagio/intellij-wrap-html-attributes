@@ -6,19 +6,24 @@
 
 ## Template ToDo list
 - [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Verify the [pluginGroup](/gradle.properties), [plugin ID](/src/main/resources/META-INF/plugin.xml) and [sources package](/src/main/kotlin).
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html).
+- [x] Verify the [pluginGroup](/gradle.properties), [plugin ID](/src/main/resources/META-INF/plugin.xml) and [sources package](/src/main/kotlin).
+- [x] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html).
 - [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
 - [ ] Set the Plugin ID in the above README badges.
 - [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
+- [x] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
 
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
+Put every attribute of an HTML tag on a new line.
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
 
-To keep everything working, do not remove `<!-- ... -->` sections. 
+Usage: place text cursor on a tag and press (default) keymap <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>W</kbd>.
+
+
+See <kbd>File</kbd> > <kbd>⚙️ Settings</kbd> (or <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>S</kbd>) > <kbd>Tools</kbd> > <kbd>Wrap HTML Plugin</kbd> for plugin settings.
+
+
+v1.1.0 credits to [Sander Bruggeman](https://github.com/terrabythia) ([source](https://github.com/terrabythia/intellij_plugin_wrap_html_attributes))
 <!-- Plugin description end -->
 
 ## Installation
@@ -34,7 +39,15 @@ To keep everything working, do not remove `<!-- ... -->` sections.
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
 
+## Credits
+
+The code on this repository for v1.1.0 is a direct fork of [Wrap HTML attributes on new lines](https://plugins.jetbrains.com/plugin/12766-wrap-html-attributes-on-new-lines) ([source](https://github.com/terrabythia/intellij_plugin_wrap_html_attributes)) by [Sander Bruggeman](https://github.com/terrabythia).
+
+This repository is set to support IntelliJ-based IDEs versions starting from `2020.3` (because of '[IntelliJ project migrates to Java 11](https://blog.jetbrains.com/platform/2020/09/intellij-project-migrates-to-java-11/)').
+
+
 ---
-Plugin based on the [IntelliJ Platform Plugin Template][template].
+
+Plugin version based on the [IntelliJ Platform Plugin Template][template].
 
 [template]: https://github.com/JetBrains/intellij-platform-plugin-template
