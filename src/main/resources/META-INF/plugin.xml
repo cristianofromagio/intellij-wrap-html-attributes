@@ -1,19 +1,35 @@
 <idea-plugin>
-    <id>com.github.cristianofromagio.intellijwraphtmlattributes</id>
-    <name>intellij-wrap-html-attributes</name>
-    <vendor>cristianofromagio</vendor>
+    <id>dev.cristianofromagio.wrap_html_attributes</id>
+    <name>Wrap HTML Attributes on New Lines</name>
+    <vendor url="https://github.com/cristianofromagio">Cristiano Fromagio</vendor>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.cristianofromagio.intellijwraphtmlattributes.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.cristianofromagio.intellijwraphtmlattributes.services.MyProjectService"/>
+        <applicationConfigurable
+            groupId="tools"
+            displayName="Wrap Attributes Plugin"
+            id="preferences.WrapLinesConfigurable"
+            instance="dev.cristianofromagio.wrap_html_attributes.WrapLinesConfigurable"/>
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.cristianofromagio.intellijwraphtmlattributes.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
+    <actions>
+        <action
+            id="WrapLinesAction.WrapLinesAction"
+            class="dev.cristianofromagio.wrap_html_attributes.WrapLinesAction"
+            text="Wrap Attributes"
+            description="Wrap lines on current selection or cursor position">
+            <add-to-group
+                group-id="CodeMenu"
+                anchor="after"
+                relative-to-action="OptimizeImports"/>
+            <keyboard-shortcut
+                keymap="$default"
+                first-keystroke="ctrl alt W"/>
+        </action>
+    </actions>
+
 </idea-plugin>
