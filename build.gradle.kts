@@ -1,6 +1,7 @@
 import io.gitlab.arturbosch.detekt.Detekt
 import org.jetbrains.changelog.closure
 import org.jetbrains.changelog.markdownToHTML
+import org.jetbrains.changelog.date
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 fun properties(key: String) = project.findProperty(key).toString()
@@ -49,7 +50,12 @@ intellij {
 // Read more: https://github.com/JetBrains/gradle-changelog-plugin
 changelog {
     version = properties("pluginVersion")
-    groups = emptyList()
+    path = "${project.projectDir}/CHANGELOG.md"
+    header = closure { "[$version] - ${date()}" }
+    itemPrefix = "-"
+    keepUnreleasedSection = true
+    unreleasedTerm = "[Unreleased]"
+    groups = listOf("Added", "Changed", "Deprecated", "Removed", "Fixed", "Security")
 }
 
 // Configure detekt plugin.
