@@ -4,6 +4,8 @@
 [![Version](https://img.shields.io/jetbrains/plugin/v/16694-wrap-html-attributes-on-new-lines.svg)](https://plugins.jetbrains.com/plugin/16694-wrap-html-attributes-on-new-lines)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/16694-wrap-html-attributes-on-new-lines.svg)](https://plugins.jetbrains.com/plugin/16694-wrap-html-attributes-on-new-lines)
 
+<img src="https://raw.githubusercontent.com/cristianofromagio/intellij-wrap-html-attributes/main/src/main/resources/META-INF/pluginIcon.svg" border="0" width="100"/>
+
 ### Wrap HTML Attributes on New Lines
 
 <!-- Plugin description -->
